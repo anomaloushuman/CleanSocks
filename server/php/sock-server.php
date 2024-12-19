@@ -1,5 +1,6 @@
 <?php
 // Created by anomaloushuman - Patrick Garcia
+// Email - patrick@ubiquityglass.com
 // 12/19/2024 - Sock Server v0.0.1
 
 $serverKey = 'your-very-secure-key'; // Shared secret key for HMAC and encryption
