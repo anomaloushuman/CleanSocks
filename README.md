@@ -11,6 +11,10 @@ An open-source, cross-platform, secure, extensible, full-duplex custom protocol 
 - [C++ Client](#cpp-client)
 - [Rust Client](#rust-client)
 - [PHP Server](#php-server)
+- [Node.js Server](#nodejs-server)
+- [Next.js Server](#nextjs-server)
+- [C Server](#c-server)
+- [C++ Server](#cpp-server)
 - [License](#license)
 
 ## Java Client
@@ -18,7 +22,7 @@ An open-source, cross-platform, secure, extensible, full-duplex custom protocol 
 ### Description
 The Java client connects to a secure socket server using a custom protocol. It performs a handshake and sends encrypted messages with HMAC for integrity.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have JDK installed.
 2. Compile the Java client:
    ```bash
@@ -29,12 +33,15 @@ The Java client connects to a secure socket server using a custom protocol. It p
    java -cp . SecureClient
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## Kotlin Client
 
 ### Description
 The Kotlin client functions similarly to the Java client, utilizing Kotlin's features for a more concise implementation.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have Kotlin installed.
 2. Compile the Kotlin client:
    ```bash
@@ -45,12 +52,15 @@ The Kotlin client functions similarly to the Java client, utilizing Kotlin's fea
    java -jar sock-client.jar
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## JavaScript Client
 
 ### Description
 The JavaScript client uses Node.js to connect to the secure socket server, sending and receiving encrypted messages.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have Node.js installed.
 2. Install the required packages:
    ```bash
@@ -61,12 +71,15 @@ The JavaScript client uses Node.js to connect to the secure socket server, sendi
    node clients/javascript/sock-client.js
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## C Client
 
 ### Description
 The C client connects to the server using sockets and implements encryption and HMAC for secure communication.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have GCC and OpenSSL installed.
 2. Compile the C client:
    ```bash
@@ -77,12 +90,15 @@ The C client connects to the server using sockets and implements encryption and 
    ./sock-client
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## C++ Client
 
 ### Description
 The C++ client is similar to the C client but utilizes C++ features for better structure and readability.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have g++ and OpenSSL installed.
 2. Compile the C++ client:
    ```bash
@@ -93,12 +109,15 @@ The C++ client is similar to the C client but utilizes C++ features for better s
    ./sock-client
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## Rust Client
 
 ### Description
 The Rust client connects to the server using TCP and implements secure messaging with encryption and HMAC.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have Rust installed.
 2. Compile the Rust client:
    ```bash
@@ -109,17 +128,91 @@ The Rust client connects to the server using TCP and implements secure messaging
    ./sock-client
    ```
 
+### Deployment
+- Ensure the server is running and accessible at the specified address and port.
+
 ## PHP Server
 
 ### Description
 The PHP server listens for incoming connections and handles secure communication with clients using TLS.
 
-### Compilation Instructions
+### Build Instructions
 1. Ensure you have PHP installed with OpenSSL support.
 2. Run the PHP server:
    ```bash
    php server/php/sock-server.php
    ```
+
+### Deployment
+- Ensure the server is configured with the correct paths to the SSL certificates and is running on the specified port.
+
+## Node.js Server
+
+### Description
+The Node.js server uses TLS to secure communication with clients.
+
+### Build Instructions
+1. Ensure you have Node.js installed.
+2. Run the Node.js server:
+   ```bash
+   node server/node.js/sock-server.node.js
+   ```
+
+### Deployment
+- Ensure the server is configured with the correct paths to the SSL certificates and is running on the specified port.
+
+## Next.js Server
+
+### Description
+The Next.js server uses TLS to secure communication with clients.
+
+### Build Instructions
+1. Ensure you have Node.js installed.
+2. Run the Next.js server:
+   ```bash
+   node server/next.js/sock-server.next.js
+   ```
+
+### Deployment
+- Ensure the server is configured with the correct paths to the SSL certificates and is running on the specified port.
+
+## C Server
+
+### Description
+The C server listens for incoming connections and implements secure communication with clients using OpenSSL.
+
+### Build Instructions
+1. Ensure you have GCC and OpenSSL installed.
+2. Compile the C server:
+   ```bash
+   gcc -o sock-server server/c/sock-server.c -lssl -lcrypto
+   ```
+3. Run the server:
+   ```bash
+   ./sock-server
+   ```
+
+### Deployment
+- Ensure the server is configured with the correct paths to the SSL certificates and is running on the specified port.
+
+## C++ Server
+
+### Description
+The C++ server is similar to the C server but utilizes C++ features for better structure and readability.
+
+### Build Instructions
+1. Ensure you have g++ and OpenSSL installed.
+2. Compile the C++ server:
+   ```bash
+   g++ -o sock-server server/c++/sock-server.cpp -lssl -lcrypto
+   ```
+3. Run the server:
+   ```bash
+   ./sock-server
+   ```
+
+### Deployment
+- Ensure the server is configured with the correct paths to the SSL certificates and is running on the specified port.
 
 ## License
 
