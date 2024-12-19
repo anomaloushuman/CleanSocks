@@ -1,6 +1,6 @@
 # CleanSocks
 
-An open-source, cross-platform, secure, extensible, full-duplex custom protocol socket server and client.
+An open-source, cross-platform, secure, extensible, full-duplex custom protocol socket server and client library.
 
 ## Table of Contents
 
